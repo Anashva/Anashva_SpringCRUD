@@ -1,0 +1,154 @@
+:root {
+  --bg: #f5f8ff;
+  --surface: #ffffff;
+  --primary: #1f4e79;
+  --accent: #0b78d1;
+  --muted: #6f7d8b;
+  --border: #d9e2ef;
+  --success: #2f8f4b;
+  --danger: #c53030;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: #172b4d;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.1rem;
+}
+
+header p {
+  margin: 8px 0 24px;
+  color: var(--muted);
+}
+
+section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.form-section label,
+.form-section input {
+  display: block;
+  width: 100%;
+}
+
+.form-section label {
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.form-section input {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #f8fbff;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+button,
+button.secondary {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+}
+
+button.secondary {
+  background: #eef5ff;
+  color: var(--primary);
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+thead {
+  background: #f2f7ff;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:hover {
+  background: #f7faff;
+}
+
+td.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-button {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  background: #eef5ff;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.action-button.delete {
+  background: #ffe6e6;
+  color: var(--danger);
+}
+
+.message {
+  margin-top: 12px;
+  font-size: 0.98rem;
+}
+
+.message.error {
+  color: var(--danger);
+}
+
+.message.success {
+  color: var(--success);
+}

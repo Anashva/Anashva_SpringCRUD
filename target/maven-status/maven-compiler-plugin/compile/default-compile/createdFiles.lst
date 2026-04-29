@@ -1,0 +1,6 @@
+com\student\app\controller\StudentController.class
+com\student\app\repository\StudentRepository$1.class
+com\student\app\repository\StudentRepository.class
+com\student\app\service\StudentService.class
+com\student\app\model\Student.class
+com\student\app\StudentManagementApplication.class

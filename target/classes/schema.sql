@@ -1,0 +1,9 @@
+-- This file runs automatically on startup
+-- It creates the students table if it does not already exist
+
+CREATE TABLE IF NOT EXISTS students (
+    id     SERIAL PRIMARY KEY,
+    name   VARCHAR(100) NOT NULL,
+    email  VARCHAR(150) NOT NULL UNIQUE,
+    course VARCHAR(100) NOT NULL
+);
