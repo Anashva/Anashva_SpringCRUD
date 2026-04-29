@@ -1,12 +1,21 @@
 package com.student.app.controller;
 
-import com.student.app.model.Student;
-import com.student.app.service.StudentService;
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.student.app.model.Student;
+import com.student.app.service.StudentService;
 
 /**
  * Controller layer — exposes REST API endpoints.
@@ -19,6 +28,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/students")
+@CrossOrigin(origins = "*")   
 public class StudentController {
 
     private final StudentService studentService;
